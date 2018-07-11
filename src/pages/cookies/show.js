@@ -13,7 +13,7 @@ const ShowCookie = ({ match, location, history }) => {
   return (
           <div className="vh-100">
             <h1>{foundCookie.name}</h1>
-            <Link to="/cookies">Back</Link>
+            {/* TODO: Add a way to naviate the user back the appropriate list page. */}
           </div>
         )
 }

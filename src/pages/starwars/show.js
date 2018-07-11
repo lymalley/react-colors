@@ -11,7 +11,7 @@ const ShowStarWarsName = ({ match, location, history }) => {
   return (
           <div className="vh-100">
             <h1>{foundName.name}</h1>
-            <Link to="/starwars">Back</Link>
+             {/* TODO: Add a way to navigate the user back the appropriate list page. */}
           </div>
         )
 }

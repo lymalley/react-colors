@@ -11,7 +11,7 @@ const ShowColor = ({ match, location, history }) => {
   return (
           <div className="vh-100">
             <h1 style={{ backgroundColor: color.value }}>{color.name}</h1>
-            <Link to="/colors">Back</Link>
+            {/* TODO: Add a way to naviate the user back the appropriate list page. */}
           </div>
         )
 }
