@@ -1,9 +1,11 @@
-import React from 'react'
-import { map } from 'ramda'
 import words from '../../data/buzzwords'
-import {Link} from 'react-router-dom'
 
-const li = bw => <li key={bw.id}><Link to={`/buzzwords/${bw.id}`}>{bw.name}</Link></li>
+
+/*
+TODO: Provide a link to the show page for each buzzword.
+*/
+
+const li = bw => <li key={bw.id}>{bw.name}</li>
 
 const Buzzwords = props => {
   return (

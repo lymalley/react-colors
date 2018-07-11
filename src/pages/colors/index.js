@@ -1,12 +1,15 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
 import { map } from 'ramda'
 import colors from '../../data/colors'
+
+
+/*
+TODO: Provide a link to the show page for each color.
+*/
 
 function li(color) {
   return (
     <li key={color.id} style={{ color: color.value }}>
-      <Link to={`/colors/${color.id}`}>{color.name}</Link>
+      {color.name}
     </li>
   )
 }
