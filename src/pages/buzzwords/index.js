@@ -9,7 +9,7 @@ const Buzzwords = props => {
   return (
     <div>
       <h1>Buzzwords</h1>
-      <Link to="/">Home</Link>
+      {/* TODO: Provide a link that sends the user to the home page/menu. */}
       <ul>{map(li, words)}</ul>
     </div>
   )

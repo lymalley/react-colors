@@ -11,7 +11,7 @@ const Cookies = props => {
   return (
     <div>
       <h1>Cookies</h1>
-      <Link to="/">Home</Link>
+      {/* TODO: Provide a link that sends the user to the home page/menu. */}
       <ul>{map(li, cookies)}</ul>
     </div>
   )
