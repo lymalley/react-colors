@@ -1,14 +1,16 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 import fortuneCookies from '../../data/cookies'
-import {find} from 'ramda'
-import {Link} from 'react-router-dom'
 
-const ShowCookie = ({ match, location, history }) => {
-
-    console.log({match, fortuneCookies})
-  const foundCookie = find(c => c.id === match.params.id, fortuneCookies)
-  console.log({match, fortuneCookies, foundCookie})
+const ShowCookie = (props) => {
+  
+    /*
+    TODO: This "show" page is meant to display a single fortune cookie.  
+          Find the fortune cookie in the array of fortune cookies
+          A matched path/route parameter can help you identify 
+          the cookie to display.
+    */
+  
   
   return (
           <div className="vh-100">

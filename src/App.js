@@ -20,11 +20,8 @@ const App = props => {
           <Route exact path="/colors" component={Colors} />
           <Route exact path="/colors/:id" component={ShowColor} />
           <Route exact path="/starwars" component={StarWars} />
-          <Route exact path="/starwars/:id" component={ShowStarWarsName} />
           <Route exact path="/buzzwords" component={BuzzWords} />
-          <Route exact path="/buzzwords/:id" component={ShowBuzzWord} />
           <Route exact path="/cookies" component={Cookies} />
-          <Route exact path="/cookies/:id" component={ShowCookie} />
           <Route exact path="/testwithrouterpage" component={TestWithRouterPage} />
         </Switch>
       </div>

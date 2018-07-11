@@ -1,12 +1,16 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 import words from '../../data/buzzwords'
-import {find} from 'ramda'
-import {Link} from 'react-router-dom'
 
-const ShowBuzzWord = ({ match, location, history }) => {
+const ShowBuzzWord = (props) => {
 
-  const foundWord = find(c => c.id === match.params.id ,words)
+  /*
+    TODO: This "show" page is meant to display a single buzzword.  
+          Find the buzzword in the array of buzzwords
+          A matched path/route parameter can help you identify 
+          the buzzword to display.
+  */
+  const foundWord = undefined
 
   return (
           <div className="vh-100">

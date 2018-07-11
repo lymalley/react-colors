@@ -1,12 +1,15 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 import colors from '../../data/colors'
-import {find} from 'ramda'
-import {Link} from 'react-router-dom'
 
-const ShowColor = ({ match, location, history }) => {
+const ShowColor = ({ location, history }) => {
 
-  const color = find(c => c.id === match.params.id ,colors)
+  /*
+    TODO: This "show" page is meant to display a single color.  
+          Find the buzzword in the array of buzzwords
+          A matched path/route parameter can help you identify 
+          the color to display.
+  */
 
   return (
           <div className="vh-100">
