@@ -1,10 +1,18 @@
 import React from 'react'
-import { withRouter } from 'react-router'
 import words from '../../data/buzzwords'
 import {find} from 'ramda'
 import {Link} from 'react-router-dom'
 
-const ShowBuzzWord = ({ match, location, history }) => {
+/*
+      TODO: Utilize the withRouter Higher Order Component (HOC) to provide
+      matched route parameter values.  
+      withRouter will pass updated match, location, and history props 
+      to the wrapped component whenever it renders.
+
+      https://reacttraining.com/react-router/web/api/withRouter
+*/
+
+const ShowBuzzWord = () => {
 
   const foundWord = find(c => c.id === match.params.id ,words)
 
@@ -16,4 +24,4 @@ const ShowBuzzWord = ({ match, location, history }) => {
         )
 }
 
-export default withRouter(ShowBuzzWord)
+export default ShowBuzzWord

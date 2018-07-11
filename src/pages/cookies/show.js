@@ -1,15 +1,21 @@
 import React from 'react'
-import { withRouter } from 'react-router'
 import fortuneCookies from '../../data/cookies'
 import {find} from 'ramda'
 import {Link} from 'react-router-dom'
 
-const ShowCookie = ({ match, location, history }) => {
+/*
+      TODO: Utilize the withRouter Higher Order Component (HOC) to provide
+      matched route parameter values.  
+      withRouter will pass updated match, location, and history props 
+      to the wrapped component whenever it renders.
 
-    console.log({match, fortuneCookies})
-  const foundCookie = find(c => c.id === match.params.id, fortuneCookies)
-  console.log({match, fortuneCookies, foundCookie})
-  
+      https://reacttraining.com/react-router/web/api/withRouter
+*/
+
+const ShowCookie = (props) => {
+
+  const foundCookie = find(c => c.id === id, fortuneCookies)
+    
   return (
           <div className="vh-100">
             <h1>{foundCookie.name}</h1>
@@ -18,4 +24,4 @@ const ShowCookie = ({ match, location, history }) => {
         )
 }
 
-export default withRouter(ShowCookie)
+export default ShowCookie
