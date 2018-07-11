@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import { map } from 'ramda'
 import colors from '../../data/colors'
 
-
 function li(color) {
   return (
     <li key={color.id} style={{ color: color.value }}>

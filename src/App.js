@@ -1,41 +1,15 @@
 import React from 'react'
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Colors from './pages/colors'
 import ShowColor from './pages/colors/show'
-
 import StarWars from './pages/starwars'
 import ShowStarWarsName from './pages/starwars/show'
-
 import BuzzWords from './pages/buzzwords'
 import ShowBuzzWord from './pages/buzzwords/show'
-
 import Cookies from './pages/cookies'
 import ShowCookie from './pages/cookies/show'
-
 import TestWithRouterPage from './pages/test-withrouter-page';
-
-const Menu = props => {
-  return (
-    <div>
-      <h1>Five in One</h1>
-      <ul>
-        <li>
-          <Link to="/colors">Colors</Link>
-        </li>
-        <li>
-          <Link to="/buzzwords">BuzzWords</Link>
-        </li>
-        <li>
-          <Link to="/starwars">Star Wars Names</Link>
-        </li>
-        <li>
-          <Link to="/cookies">Fortune Cookies</Link>
-        </li>
-      </ul>
-    </div>
-  )
-}
+import Menu from './pages/menu'
 
 const App = props => {
   return (

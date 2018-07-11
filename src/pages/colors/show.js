@@ -9,8 +9,8 @@ const ShowColor = ({ match, location, history }) => {
   const color = find(c => c.id === match.params.id ,colors)
 
   return (
-          <div className="vh-100" style={{ backgroundColor: color.value }}>
-            <h1>{color.name}</h1>
+          <div className="vh-100">
+            <h1 style={{ backgroundColor: color.value }}>{color.name}</h1>
             <Link to="/colors">Back</Link>
           </div>
         )
