@@ -9,14 +9,13 @@ import ShowBuzzWord from './pages/buzzwords/show'
 import Cookies from './pages/cookies'
 import ShowCookie from './pages/cookies/show'
 import TestWithRouterPage from './pages/test-withrouter-page';
-import Menu from './pages/menu'
+
 
 const App = props => {
   return (
     <BrowserRouter>
       <div>
         <Switch>
-          <Route exact path="/" component={Menu} />
           <Route exact path="/colors" component={Colors} />
           <Route exact path="/colors/:id" component={ShowColor} />
           <Route exact path="/starwars" component={StarWars} />
