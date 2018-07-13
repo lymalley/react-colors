@@ -1,7 +1,7 @@
-import React from 'react'
-import words from '../../data/buzzwords'
-import {find} from 'ramda'
-import {Link} from 'react-router-dom'
+import React from "react";
+import words from "../../data/buzzwords";
+import { find } from "ramda";
+import { Link } from "react-router-dom";
 
 /*
       TODO: Utilize the withRouter Higher Order Component (HOC) to provide
@@ -12,16 +12,15 @@ import {Link} from 'react-router-dom'
       https://reacttraining.com/react-router/web/api/withRouter
 */
 
-const ShowBuzzWord = () => {
-
-  const foundWord = find(c => c.id === match.params.id ,words)
+const ShowBuzzWord = ({ match, location, history }) => {
+  const foundWord = find(c => c.id === match.params.id, words);
 
   return (
-          <div className="vh-100">
-            <h1>{foundWord.name}</h1>
-            <Link to="/buzzwords">Back</Link>
-          </div>
-        )
-}
+    <div className="vh-100">
+      <h1>{foundWord.name}</h1>
+      <Link to="/buzzwords">Back</Link>
+    </div>
+  );
+};
 
-export default ShowBuzzWord
+export default ShowBuzzWord;

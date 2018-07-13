@@ -1,7 +1,7 @@
-import React from 'react'
-import colors from '../../data/colors'
-import {find} from 'ramda'
-import {Link} from 'react-router-dom'
+import React from "react";
+import colors from "../../data/colors";
+import { find } from "ramda";
+import { Link } from "react-router-dom";
 
 /*
       TODO: Utilize the withRouter Higher Order Component (HOC) to provide
@@ -12,16 +12,15 @@ import {Link} from 'react-router-dom'
       https://reacttraining.com/react-router/web/api/withRouter
 */
 
-const ShowColor = () => {
-
-  const color = find(c => c.id === match.params.id ,colors)
+const ShowColor = ({ match, location, history }) => {
+  const color = find(c => c.id === match.params.id, colors);
 
   return (
-          <div className="vh-100">
-            <h1 style={{ backgroundColor: color.value }}>{color.name}</h1>
-            <Link to="/colors">Back</Link>
-          </div>
-        )
-}
+    <div className="vh-100">
+      <h1 style={{ backgroundColor: color.value }}>{color.name}</h1>
+      <Link to="/colors">Back</Link>
+    </div>
+  );
+};
 
-export default ShowColor
+export default ShowColor;
